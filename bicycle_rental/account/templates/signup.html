@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="post">
+        <h3>
+            <center> SIGN UP</center>
+        </h3>
+        <div class="container">
+
+            {% csrf_token %}
+
+            {% for form in registation_form %}
+
+                <label><b>{{ form.label_tag }}</b></label>
+
+                {{ form }}
+
+
+            {% endfor %}
+            <br><br>
+            
+            <div class="container" align="center">
+                <button type="submit" class="waves-effect waves-light btn">Sign Up</button>
+    </form>
+
+{% endblock %}
+
+
+</body>
+</html>

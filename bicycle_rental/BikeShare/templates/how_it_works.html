@@ -1,0 +1,48 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="divider"></div>
+  <div class="section">
+
+    <br>
+
+    <h4><i class="material-icons" style="font-size: 30px">directions_bike</i> Renting a Bicycle</h4>
+    <p>You can hire a bicycle from any location in from any location at a rate of Rs100 an hour, and Rs500 per full day.
+        Select a bicycle from one of our stations to begin your rental.</p><p>
+    Note: You may hire up for 4 bicycles at any one time.</p>
+
+    <br>
+</div>
+      <div class="section">
+
+    <h4><i class="material-icons" style="font-size: 30px">directions_bike</i> Returning a Bicycle</h4>
+    <p>When you are finished using your hired bicycle, just select the location you would like to return it to and your rental price will be calulated.</p>
+    <p>Note: You will be charged to repair any damaged bicycle that you return. </p>
+
+    <br>
+      </div>
+    <div class="section">
+    <h4><i class="material-icons" style="font-size: 30px">attach_money</i> Paying for a Bicycle</h4>
+    <p>You can top up your wallet with any amount up to Rs10000 at a time using your card details.
+    You can use this to pay for your bicycle rental, which is calculated when you are finished with your hire. </p>
+</div>
+
+    <div class="section">
+
+    <h4><i class="material-icons" style="font-size: 30px">add_location</i> Our Locations</h4>
+
+    <p>We have {{ locations.count }} stations around Hyderabad where you can hire and return bicycles. </p>
+
+    {% for location in locations %}
+
+        <li>{{ location }}</li>
+
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}
